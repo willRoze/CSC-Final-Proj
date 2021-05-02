@@ -1,0 +1,242 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+struct person {
+   
+    string pname;
+    long SSN;
+
+    char gender;
+    string DOB;
+   
+    float height;
+    float weight;
+   
+    long fSSN;
+    long mSSN;
+   
+   
+};
+
+void displayPersons(struct person *CountyRes1){
+    person* tmp[5];
+    int pcount = 0;
+     for (int i = 0; i < 5; i++){
+        tmp[i] = CountyRes1;
+        CountyRes1++;
+        pcount++;
+    }
+       CountyRes1-=pcount;
+        person* swapper;
+        
+        
+     for(int i = 0; i < pcount; i++){
+        for(int j = 1; j < pcount; j++){
+            if(tmp[j]->SSN < tmp[j - 1]->SSN){
+                swapper = tmp[j];
+                tmp[j] = tmp[j - 1];
+                tmp[j - 1] = swapper;
+            }
+        }
+    }
+    //Done sorting persons by SSN
+    cout << "After sort: " << endl;
+    for (int i = 0; i < pcount; i++){
+                cout << tmp[i]->pname << " | " << tmp[i]->SSN << " | " << tmp[i]->gender << " | " << tmp[i]->DOB << " | "
+                << tmp[i]->height << " | " << tmp[i]->weight << " | " << tmp[i]->fSSN << " | "  << tmp[i]->mSSN << " | " <<  endl ;
+}
+};
+
+
+void deletePerson(struct person *CountyRes1){
+    long choice;
+    int counter;
+      person* tmp[5];
+    int pcount = 0;
+     for (int i = 0; i < 5; i++){
+        tmp[i] = CountyRes1;
+        CountyRes1++;
+        pcount++;
+    }
+    cout << "Input the SSN of the person you would like to delete. " << endl;
+    for(int i = 0; i < 5; i++){
+        cout<< tmp[i]->pname << ": " << tmp[i]->SSN << endl;
+       // tmp[i]++;
+    }
+   
+    cin >> choice;
+    
+  
+   
+   for(int i = 0; i < 5; i++){
+       if(tmp[i]->SSN != choice){
+        cout<< tmp[i]->pname << ": " << tmp[i]->SSN << endl;
+        //tmp[i]++;
+       }
+       else {
+        continue;;
+     }
+   }
+   
+   
+   
+   
+   
+};
+
+void func3(){
+   
+};
+
+void func4(){
+   
+};
+
+void func5(){
+   
+};
+
+void func6(){
+   
+};
+
+void func7(){
+   
+};
+
+void func8(){
+   
+};
+
+void func9(){
+   
+};
+
+void func10(){
+   
+};
+
+void func11(){
+   
+};
+
+void func12(){
+   
+};
+
+
+
+
+
+int main()
+{
+    int choice;
+    int flag = 0;
+   
+     person* CountyRes1 = new person[5];
+       
+         
+        CountyRes1->pname = "Michael Jackson", CountyRes1->SSN = 1234567890, CountyRes1->gender= 'M', CountyRes1->height= 70, CountyRes1->weight = 153, CountyRes1->fSSN = 1987654321, CountyRes1->mSSN = 3967486038;
+        CountyRes1++;
+       
+        CountyRes1->pname = "Joe Swanson", CountyRes1->SSN = 4657689054, CountyRes1->gender= 'M', CountyRes1->height= 30, CountyRes1->weight = 163, CountyRes1->fSSN = 1981237693, CountyRes1->mSSN = 3457698076;
+        CountyRes1++;
+       
+        CountyRes1->pname = "Janet Jackson", CountyRes1->SSN = 9012784563, CountyRes1->gender= 'F', CountyRes1->height= 65, CountyRes1->weight = 123, CountyRes1->fSSN = 2341234321, CountyRes1->mSSN = 5467656789;
+        CountyRes1++;
+       
+        CountyRes1->pname = "Jackie Chan", CountyRes1->SSN = 3452346587, CountyRes1->gender= 'M', CountyRes1->height= 55, CountyRes1->weight = 143, CountyRes1->fSSN = 5678123490, CountyRes1->mSSN = 9089907809;
+        CountyRes1++;
+       
+        CountyRes1->pname = "Mike Tyson", CountyRes1->SSN = 1436598576, CountyRes1->gender= 'M', CountyRes1->height= 75, CountyRes1->weight = 183, CountyRes1->fSSN = 4657635476, CountyRes1->mSSN = 1909878765;
+        CountyRes1++;
+       
+        CountyRes1 = CountyRes1 - 5;
+   
+     
+    while(flag == 0){
+    cout << "Welcome to the Person Console, which of the following would you like to do?" << endl;
+    cout<< "1. Display Persons " << endl << "2. Delete a Person " << endl << "3. func3 " << endl << "4. func4 " << endl << "5. func1 " << endl
+    << "6. func6 " << endl << "7. func7 " << endl << "8. func8 " << endl << "9. func9 " << endl << "10. func10 " << endl << "11. func11 " << endl
+    << "12. func12 " << endl;
+    cin >> choice;
+   
+    if(choice == 1){
+       
+       
+        displayPersons(CountyRes1);
+
+
+       
+       
+       
+        flag++;
+       
+    }
+    else if(choice == 2){
+         deletePerson(CountyRes1);
+
+
+         flag++;
+         
+    }
+    else if(choice == 3){
+         //call func3
+         flag++;
+    }
+    else if(choice == 4){
+         //call func4
+         flag++;
+    }
+    else if(choice == 5){
+         //call func5
+         flag++;
+    }
+    else if(choice == 6){
+         //call func6
+         flag++;
+    }
+    else if(choice == 7){
+         //call func7
+         flag++;
+    }
+    else if(choice == 8){
+         //call func8
+         flag++;
+    }
+    else if(choice == 9){
+         //call func9
+         flag++;
+    }
+    else if(choice == 10){
+         //call func10
+         flag++;
+    }
+    else if(choice == 11){
+         //call func11
+         flag++;
+    }
+    else if(choice == 12){
+         //call func12
+         cout<< "asegasg";
+         flag++;
+    }
+    else {
+        cout << "No option for your selection." <<endl;
+        continue;
+    }
+    }
+   
+   
+
+    return 0;
+}
