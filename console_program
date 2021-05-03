@@ -319,8 +319,96 @@ void findParents(struct person *CountyRes1){
     
 };
 
-void func10(){
-   
+void findChildren(struct person *CountyRes1){
+    person* tmp[20];
+    int pcount = 0;
+     for (int i = 0; i < 20; i++){
+        tmp[i] = CountyRes1;
+        CountyRes1++;
+        pcount++;
+    }
+    
+        person* swapper;
+        
+        
+     for(int i = 0; i < pcount; i++){
+        for(int j = 1; j < pcount; j++){
+            if(tmp[j]->SSN < tmp[j - 1]->SSN){
+                swapper = tmp[j];
+                tmp[j] = tmp[j - 1];
+                tmp[j - 1] = swapper;
+            }
+        }
+    }
+    long choice;
+     cout << "Input the SSN of the person you would like to find the children of: " << endl;
+    for(int i = 0; i < 20; i++){
+        cout<< tmp[i]->pname << ": " << tmp[i]->SSN << endl;
+       // tmp[i]++;
+    }
+    cin >> choice;
+    long childFinder;
+    int t = 0;
+    for(int i = 0; i < pcount; i++){
+        if(choice == tmp[i]->SSN){
+            childFinder = tmp[i]->SSN;
+            
+            t = 1;
+        }
+        else{
+            continue;
+        }
+        
+    }
+    if(t == 0){
+        cout<<"Selection not found";
+    }
+    int childCount;
+    for(int i = 0; i < pcount; i++){
+        if(childFinder == tmp[i]->mSSN){
+            cout<<"Child Found: " << tmp[i]->pname << " | " << tmp[i]->SSN << endl;
+            childCount++;
+        }
+        else if(childFinder == tmp[i]->fSSN){
+            cout<<"Child found: " << tmp[i]->pname << " | " << tmp[i]->SSN<< endl;
+            childCount++;
+        }
+        else{
+            continue;
+        }
+    }
+   /* 
+    person* childArr[childCount];
+    int x = 0;
+    cout<<"here";
+   for(int i = 0; i < pcount; i++){
+        if(childFinder == tmp[i]->mSSN){
+            childArr[x] = tmp[i];
+            x++;
+        }
+        else if(childFinder == tmp[i]->fSSN){
+            childArr[x] = tmp[i];
+            x++;
+        }
+        else{
+            continue;
+        }
+    }
+    cout<<"there";
+    for(int i = 0; i < childCount; i++){
+        for(int j = 1; j < childCount; j++){
+            if(get_age(childArr[i]->DOB) < get_age(childArr[i - 1]->DOB)){
+                swapper = childArr[i];
+                childArr[i] = childArr[i - 1];
+                childArr[i - 1] = swapper;
+            }
+        }
+    }
+    
+    for(int i = 0; i < childCount; i++){
+         cout<<"Child found: " << childArr[i]->pname << " | " << get_age(childArr[i]->DOB)<< endl;
+    }
+    */
 };
 
 void func11(){
@@ -433,7 +521,7 @@ int main()
     while(flag == 0){
     cout << "Welcome to the Person Console, which of the following would you like to do?" << endl;
     cout<< "1. Display Persons " << endl << "2. Delete a Person " << endl << "3. func3 " << endl << "4. func4 " << endl << "5. Edit a Person " << endl
-    << "6. Check if Eligible for Social Security " << endl << "7. func7 " << endl << "8. func8 " << endl << "9. Find Parents of a Person " << endl << "10. func10 " << endl << "11. func11 " << endl
+    << "6. Check if Eligible for Social Security " << endl << "7. func7 " << endl << "8. func8 " << endl << "9. Find Parents of a Person " << endl << "10. Find the all Children of a Person " << endl << "11. func11 " << endl
     << "12. func12 " << endl;
     cin >> choice;
    
@@ -485,7 +573,7 @@ int main()
          flag++;
     }
     else if(choice == 10){
-         //call func10
+         findChildren(CountyRes1);
          flag++;
     }
     else if(choice == 11){
