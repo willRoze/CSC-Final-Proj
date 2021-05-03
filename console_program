@@ -67,6 +67,10 @@ void deletePerson(struct person *CountyRes1){
         CountyRes1++;
         pcount++;
     }
+    
+    
+    
+    
     cout << "Input the SSN of the person you would like to delete. " << endl;
     for(int i = 0; i < 5; i++){
         cout<< tmp[i]->pname << ": " << tmp[i]->SSN << endl;
@@ -140,27 +144,96 @@ void func12(){
 int main()
 {
     int choice;
+    int sizeCount = 0;
     int flag = 0;
    
-     person* CountyRes1 = new person[5];
+     person* CountyRes1 = new person[21];
        
          
-        CountyRes1->pname = "Michael Jackson", CountyRes1->SSN = 1234567890, CountyRes1->gender= 'M', CountyRes1->height= 70, CountyRes1->weight = 153, CountyRes1->fSSN = 1987654321, CountyRes1->mSSN = 3967486038;
+        CountyRes1->pname = "Michael Jackson", CountyRes1->SSN = 1234567890, CountyRes1->gender= 'M',CountyRes1->DOB = "6/1/1942", CountyRes1->height= 70, CountyRes1->weight = 153, CountyRes1->fSSN = 1987654321, CountyRes1->mSSN = 3967486038;
         CountyRes1++;
+        sizeCount++;
        
-        CountyRes1->pname = "Joe Swanson", CountyRes1->SSN = 4657689054, CountyRes1->gender= 'M', CountyRes1->height= 30, CountyRes1->weight = 163, CountyRes1->fSSN = 1981237693, CountyRes1->mSSN = 3457698076;
+        CountyRes1->pname = "Joe Swanson", CountyRes1->SSN = 4657689054, CountyRes1->gender= 'M',CountyRes1->DOB = "1/12/1950", CountyRes1->height= 30, CountyRes1->weight = 163, CountyRes1->fSSN = 1981237693, CountyRes1->mSSN = 3457698076;
         CountyRes1++;
+        sizeCount++;
        
-        CountyRes1->pname = "Janet Jackson", CountyRes1->SSN = 9012784563, CountyRes1->gender= 'F', CountyRes1->height= 65, CountyRes1->weight = 123, CountyRes1->fSSN = 2341234321, CountyRes1->mSSN = 5467656789;
+        CountyRes1->pname = "Janet Jackson", CountyRes1->SSN = 9012784563, CountyRes1->gender= 'F',CountyRes1->DOB = "12/31/1951", CountyRes1->height= 65, CountyRes1->weight = 123, CountyRes1->fSSN = 2341234321, CountyRes1->mSSN = 5467656789;
         CountyRes1++;
+        sizeCount++;
        
-        CountyRes1->pname = "Jackie Chan", CountyRes1->SSN = 3452346587, CountyRes1->gender= 'M', CountyRes1->height= 55, CountyRes1->weight = 143, CountyRes1->fSSN = 5678123490, CountyRes1->mSSN = 9089907809;
+        CountyRes1->pname = "Jackie Chan", CountyRes1->SSN = 3452346587, CountyRes1->gender= 'M',CountyRes1->DOB = "5/15/1952", CountyRes1->height= 55, CountyRes1->weight = 143, CountyRes1->fSSN = 5678123490, CountyRes1->mSSN = 9089907809;
         CountyRes1++;
+        sizeCount++;
        
-        CountyRes1->pname = "Mike Tyson", CountyRes1->SSN = 1436598576, CountyRes1->gender= 'M', CountyRes1->height= 75, CountyRes1->weight = 183, CountyRes1->fSSN = 4657635476, CountyRes1->mSSN = 1909878765;
+        CountyRes1->pname = "Mike Tyson", CountyRes1->SSN = 1436598576, CountyRes1->gender= 'M',CountyRes1->DOB = "5/18/1956", CountyRes1->height= 75, CountyRes1->weight = 183, CountyRes1->fSSN = 4657635476, CountyRes1->mSSN = 1909878765;
         CountyRes1++;
+        sizeCount++;
+       /////
+       CountyRes1->pname = "Mike Jackson", CountyRes1->SSN = 8271516054, CountyRes1->gender= 'M',CountyRes1->DOB = "11/6/1985",  CountyRes1->height= 70, CountyRes1->weight = 153, CountyRes1->fSSN = 1234567890, CountyRes1->mSSN = 3987486038;
+        CountyRes1++;
+        sizeCount++;
        
-        CountyRes1 = CountyRes1 - 5;
+        CountyRes1->pname = "Shelia Jackson", CountyRes1->SSN = 8271516064, CountyRes1->gender= 'F', CountyRes1->DOB = "10/5/1987",   CountyRes1->height= 60, CountyRes1->weight = 152, CountyRes1->fSSN = 1234567890, CountyRes1->mSSN = 3987486038;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Dave Jackson", CountyRes1->SSN = 7251708129, CountyRes1->gender= 'M', CountyRes1->DOB = "3/7/1988", CountyRes1->height= 73, CountyRes1->weight = 133, CountyRes1->fSSN = 7251708128, CountyRes1->mSSN = 9012784563;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Michell Tyson", CountyRes1->SSN = 3637662533, CountyRes1->gender= 'F', CountyRes1->DOB = "4/28/1989", CountyRes1->height= 83, CountyRes1->weight = 153, CountyRes1->fSSN = 1436598576, CountyRes1->mSSN = 8012784563;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "John Tyson", CountyRes1->SSN = 3637662534, CountyRes1->gender= 'M', CountyRes1->DOB = "5/12/1989",  CountyRes1->height= 93, CountyRes1->weight = 173, CountyRes1->fSSN = 1436598576, CountyRes1->mSSN = 8012784563;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Sam Swanson", CountyRes1->SSN = 9442254873, CountyRes1->gender= 'M', CountyRes1->DOB = "3/25/1991",  CountyRes1->height= 53, CountyRes1->weight = 163, CountyRes1->fSSN = 4657689054, CountyRes1->mSSN = 4657689053;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Peter Swanson", CountyRes1->SSN = 9442254874, CountyRes1->gender= 'M', CountyRes1->DOB = "2/8/1992",  CountyRes1->height= 53, CountyRes1->weight = 163, CountyRes1->fSSN = 4657689054, CountyRes1->mSSN = 4657689053;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Olivia Chan", CountyRes1->SSN = 4842445686, CountyRes1->gender= 'F',  CountyRes1->DOB = "10/4/1994", CountyRes1->height= 63, CountyRes1->weight = 153, CountyRes1->fSSN = 3452346587, CountyRes1->mSSN = 3352346587;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Vernice Chan", CountyRes1->SSN = 4842445687, CountyRes1->gender= 'F', CountyRes1->DOB = "10/30/1995",  CountyRes1->height= 62, CountyRes1->weight = 154, CountyRes1->fSSN = 3452346587, CountyRes1->mSSN = 3352346587;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Keanu Reeves", CountyRes1->SSN = 6847355207, CountyRes1->gender= 'M', CountyRes1->DOB = "5/23/1963", CountyRes1->height= 82, CountyRes1->weight = 194, CountyRes1->fSSN = 6847555207, CountyRes1->mSSN = 6846355207;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Wendel Reeves", CountyRes1->SSN = 8847355207, CountyRes1->gender= 'M',  CountyRes1->DOB = "11/14/1996", CountyRes1->height= 72, CountyRes1->weight = 184, CountyRes1->fSSN = 6847355207, CountyRes1->mSSN = 9847355207;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Kayce Reeves", CountyRes1->SSN = 8847355208, CountyRes1->gender= 'F',  CountyRes1->DOB = "12/17/1996",  CountyRes1->height= 70, CountyRes1->weight = 180, CountyRes1->fSSN = 6847355207, CountyRes1->mSSN = 9847355207;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Dorthy Fish", CountyRes1->SSN = 9064787187, CountyRes1->gender= 'F',CountyRes1->DOB = "7/22/1965", CountyRes1->height= 50, CountyRes1->weight = 130, CountyRes1->fSSN = 9064787177, CountyRes1->mSSN = 9064797187;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Nemo Fish", CountyRes1->SSN = 7776082706, CountyRes1->gender= 'M', CountyRes1->DOB = "5/22/1998",  CountyRes1->height= 50, CountyRes1->weight = 135, CountyRes1->fSSN = 7776082705, CountyRes1->mSSN = 9064787187;
+        CountyRes1++;
+        sizeCount++;
+        
+        CountyRes1->pname = "Bemo Fish", CountyRes1->SSN = 7776082709, CountyRes1->gender= 'M', CountyRes1->DOB = "3/15/1999",  CountyRes1->height= 53, CountyRes1->weight = 134, CountyRes1->fSSN = 7776082705, CountyRes1->mSSN = 9064787187;
+        CountyRes1++;
+        sizeCount++;
+       
+       
+       
+        CountyRes1 = CountyRes1 - sizeCount;
+        cout<< sizeCount << endl;
    
      
     while(flag == 0){
@@ -239,4 +312,4 @@ int main()
    
 
     return 0;
-}
+} 
