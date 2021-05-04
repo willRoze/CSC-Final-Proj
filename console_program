@@ -9,6 +9,8 @@ Write your code in this editor and press "Run" button to compile and execute it.
 #include <iostream>
 #include <time.h> 
 #include <string>
+#include <fstream>
+
 using namespace std;
 
 struct person {
