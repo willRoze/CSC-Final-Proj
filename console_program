@@ -391,7 +391,7 @@ void atRisk(struct person *CountyRes1){
 
 };
 
-void genderRatio(){
+void genderRatio(struct person *CountyRes1){
     
     person* tmp[20];
         int pcount = 0;
@@ -406,11 +406,11 @@ void genderRatio(){
     
     for(int i = 0; i < pcount; i++)
     {
-        if (gender == F)
+        if (gender == f)
         {
             fcount++;
         }
-        if else (gender == M)
+        if else (gender == m)
         {
             mcount++;
         }
