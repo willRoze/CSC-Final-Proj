@@ -370,8 +370,25 @@ void socialCheck(struct person *CountyRes1){
     
 };
 
-void func7(){
-   
+void atRisk(struct person *CountyRes1){
+    
+    person* tmp[20];
+        int pcount = 0;
+         for (int i = 0; i < 20; i++){
+            tmp[i] = CountyRes1;
+            CountyRes1++;
+            pcount++;
+        }
+    
+    float BMI = weight*0.45/((height*0.0254)*(height*0.0254));
+        
+         for(int i = 0; i < pcount; i++){
+             
+             if(BMI <= 27){
+                 cout << "The BMI of" << tmp[i]->pname << "is " << BMI << "therefore they are at risk for cardiovascular disease" <<endl;
+             }
+         }
+
 };
 
 void func8(){
