@@ -181,6 +181,14 @@ void addPerson(struct person *CountyRes1){
             getline (cin, strInp);
             newPerson.weight = stof(strInp);
             
+            cout << "Father's SSN:";
+            getline (cin, strInp);
+            newPerson.fSSN = stol(strInp);
+            
+            cout << "Mother's SSN:";
+            getline (cin, strInp);
+            newPerson.mSSN = stol(strInp);
+            
         }while (response == 'Y' || response == 'y');
    
     
