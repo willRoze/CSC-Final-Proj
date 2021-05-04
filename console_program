@@ -146,8 +146,44 @@ void deletePerson(struct person *CountyRes1){
    
 };
 
-void func3(){
+void addPerson(struct person *CountyRes1){
+    char response;
+    person newPerson;
+    string strInp;
+    
+    do
+        {
+            cout << "Would you like to add a new person?";
+            cin >> response;
+            cout << endl;
+            
+            cout << "Name:";
+            getline (cin, strInp);
+            newPerson.pname = strInp;
+            
+            cout << "SSN:";
+            getline (cin, strInp);
+            newPerson.SSN = stol(strInp);
+            
+            cout << "Gender:";
+            getline (cin, strInp);
+            newPerson.gender = strInp[0];
+            
+            cout << "Date of birth:";
+            getline (cin, strInp);
+            newPerson.DOB = strInp;
+            
+            cout << "Height:";
+            getline (cin, strInp);
+            newPerson.height = stof(strInp);
+            
+            cout << "Weight:";
+            getline (cin, strInp);
+            newPerson.weight = stof(strInp);
+            
+        }while (response == 'Y' || response == 'y');
    
+    
 };
 
 void func4(){
