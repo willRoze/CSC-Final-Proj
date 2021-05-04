@@ -208,28 +208,28 @@ void addArray(struct person *CountyRes1){
     {
   
         getline(citizen, fLine);
-        //countryResident[i].pname = fLine;
+        //countyResident[i].pname = fLine;
         getline(citizen, fLine);
-        //countryResident[i].SSN = stol(fLine);
+        //countyResident[i].SSN = stol(fLine);
         getline(citizen, fLine);
-        //countryResident[i].gender = fLine[0];
+        //countyResident[i].gender = fLine[0];
         getline(citizen, fLine);
-        //countryResident[i].DOB = fLine;
+        //countyResident[i].DOB = fLine;
         getline(citizen, fLine);
-        //countryResident[i].height = stof(fLine);
+        //countyResident[i].height = stof(fLine);
         getline(citizen, fLine);
-        //countryResident[i].weight = stof(fLine);
+        //countyResident[i].weight = stof(fLine);
         getline(citizen, fLine);
-        //countryResident[i].fSSN = stol(fLine);
+        //countyResident[i].fSSN = stol(fLine);
         getline(citizen, fLine);
-        //countryResident[i].mSSN = stol(fLine);
+        //countyResident[i].mSSN = stol(fLine);
 
         pcount++;
     }
     
     citizen.close();
     
-    person countryResident[pcount]; //array of persons
+    person countyResident[pcount]; //array of persons
     
     citizen.open("file.txt");
     
@@ -238,21 +238,21 @@ void addArray(struct person *CountyRes1){
     for (int i = 0; i < pcount; i++)
     {
         getline(citizen, fLine);
-        countryResident[i].pname = fLine;
+        countyResident[i].pname = fLine;
         getline(citizen, fLine);
-        countryResident[i].SSN = stol(fLine);
+        countyResident[i].SSN = stol(fLine);
         getline(citizen, fLine);
-        countryResident[i].gender = fLine[0];
+        countyResident[i].gender = fLine[0];
         getline(citizen, fLine);
-        countryResident[i].DOB = fLine;
+        countyResident[i].DOB = fLine;
         getline(citizen, fLine);
-        countryResident[i].height = stof(fLine);
+        countyResident[i].height = stof(fLine);
         getline(citizen, fLine);
-        countryResident[i].weight = stof(fLine);
+        countyResident[i].weight = stof(fLine);
         getline(citizen, fLine);
-        countryResident[i].fSSN = stol(fLine);
+        countyResident[i].fSSN = stol(fLine);
         getline(citizen, fLine);
-        countryResident[i].mSSN = stol(fLine);
+        countyResident[i].mSSN = stol(fLine);
     }
     
     citizen.close();
@@ -260,9 +260,9 @@ void addArray(struct person *CountyRes1){
     
     for (int i = 0; i < pcount; i++)
     {
-        cout << countryResident[i].pname << " | " << countryResident[i].SSN << " | " <<
-        countryResident[i].gender << " | " << countryResident[i].DOB << " | " << countryResident[i].height << " | " << countryResident[i].weight << " | " <<
-        countryResident[i].fSSN << " | " << countryResident[i].mSSN << " | " << endl;
+        cout << countyResident[i].pname << " | " << countyResident[i].SSN << " | " <<
+        countyResident[i].gender << " | " << countyResident[i].DOB << " | " << countyResident[i].height << " | " << countyResident[i].weight << " | " <<
+        countyResident[i].fSSN << " | " << countyResident[i].mSSN << " | " << endl;
     }
 
 };
@@ -676,11 +676,11 @@ int main()
          
     }
     else if(choice == 3){
-         //call func3
+         addPerson(CountyRes1)
          flag++;
     }
     else if(choice == 4){
-         //call func4
+         addArray(CountyRes1)
          flag++;
     }
     else if(choice == 5){
@@ -692,11 +692,11 @@ int main()
          flag++;
     }
     else if(choice == 7){
-         //call func7
+         atRisk(CountyRes1)
          flag++;
     }
     else if(choice == 8){
-         //call func8
+         genderRatio(CountyRes1)
          flag++;
     }
     else if(choice == 9){
@@ -708,11 +708,11 @@ int main()
          flag++;
     }
     else if(choice == 11){
-         //call func11
+         findSiblings(CountyRes1)
          flag++;
     }
     else if(choice == 12){
-         //call func12
+         findFamily(CountyRes1)
          cout<< "asegasg";
          flag++;
     }
