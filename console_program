@@ -196,9 +196,77 @@ void addPerson(struct person *CountyRes1){
     
 };
 
-void func4(){
-   
+void addArray(){
+    
+    string fLine;
+    int pcount = 0;
+    ifstream citizen;
+    
+    citizen.open("file.txt");
+    
+    while(!citizen.eof())
+    {
+  
+        getline(citizen, fLine);
+        //countryResident[i].pname = fLine;
+        getline(citizen, fLine);
+        //countryResident[i].SSN = stol(fLine);
+        getline(citizen, fLine);
+        //countryResident[i].gender = fLine[0];
+        getline(citizen, fLine);
+        //countryResident[i].DOB = fLine;
+        getline(citizen, fLine);
+        //countryResident[i].height = stof(fLine);
+        getline(citizen, fLine);
+        //countryResident[i].weight = stof(fLine);
+        getline(citizen, fLine);
+        //countryResident[i].fSSN = stol(fLine);
+        getline(citizen, fLine);
+        //countryResident[i].mSSN = stol(fLine);
+
+        pcount++;
+    }
+    
+    citizen.close();
+    
+    person countryResident[pcount]; //array of persons
+    
+    citizen.open("file.txt");
+    
+    cout << pcount << endl;
+    
+    for (int i = 0; i < pcount; i++)
+    {
+        getline(citizen, fLine);
+        countryResident[i].pname = fLine;
+        getline(citizen, fLine);
+        countryResident[i].SSN = stol(fLine);
+        getline(citizen, fLine);
+        countryResident[i].gender = fLine[0];
+        getline(citizen, fLine);
+        countryResident[i].DOB = fLine;
+        getline(citizen, fLine);
+        countryResident[i].height = stof(fLine);
+        getline(citizen, fLine);
+        countryResident[i].weight = stof(fLine);
+        getline(citizen, fLine);
+        countryResident[i].fSSN = stol(fLine);
+        getline(citizen, fLine);
+        countryResident[i].mSSN = stol(fLine);
+    }
+    
+    citizen.close();
+    cout << "Done reading file!" << endl;
+    
+    for (int i = 0; i < pcount; i++)
+    {
+        cout << countryResident[i].pname << " | " << countryResident[i].SSN << " | " <<
+        countryResident[i].gender << " | " << countryResident[i].DOB << " | " << countryResident[i].height << " | " << countryResident[i].weight << " | " <<
+        countryResident[i].fSSN << " | " << countryResident[i].mSSN << " | " << endl;
+    }
+
 };
+   
 
 void editPerson(struct person *CountyRes1){
        long choice;
