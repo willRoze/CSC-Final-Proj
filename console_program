@@ -196,7 +196,7 @@ void addPerson(struct person *CountyRes1){
     
 };
 
-void addArray(){
+void addArray(struct person *CountyRes1){
     
     string fLine;
     int pcount = 0;
