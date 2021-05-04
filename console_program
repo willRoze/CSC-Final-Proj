@@ -391,9 +391,36 @@ void atRisk(struct person *CountyRes1){
 
 };
 
-void func8(){
-   
+void genderRatio(){
+    
+    person* tmp[20];
+        int pcount = 0;
+         for (int i = 0; i < 20; i++){
+            tmp[i] = CountyRes1;
+            CountyRes1++;
+            pcount++;
+        }
+    
+    int fcount = 0;
+    int mcount = 0;
+    
+    for(int i = 0; i < pcount; i++)
+    {
+        if (gender == F)
+        {
+            fcount++;
+        }
+        if else (gender == M)
+        {
+            mcount++;
+        }
+    }
+    
+    cout << "There are " << (fcount/mcount)*1000 << " women per 1000 men." << end;
+    
+    
 };
+   
 
 void findParents(struct person *CountyRes1){
     person* tmp[20];
