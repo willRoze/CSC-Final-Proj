@@ -65,6 +65,15 @@ float get_age(string strDOB){
     
 }
 
+float bmindex(float *weight,float *height){
+    float *bmi = nullptr;
+
+    *bmi=(*weight)/(*height**height);
+
+    return *bmi;
+
+}
+
 void displayPersons(struct person *CountyRes1){
     person* tmp[20];
     int pcount = 0;
@@ -360,9 +369,9 @@ void socialCheck(struct person *CountyRes1){
      }
     
 };
-/*
+
 void atRisk(struct person *CountyRes1){
-    
+    float bmindex = 0.0;
     person* tmp[20];
         int pcount = 0;
          for (int i = 0; i < 20; i++){
@@ -371,18 +380,12 @@ void atRisk(struct person *CountyRes1){
             pcount++;
         }
     
-    float BMI = weight*0.45/((height*0.0254)*(height*0.0254));
-        
-         for(int i = 0; i < pcount; i++){
-             
-             if(BMI <= 27){
-                 cout << "The BMI of" << tmp[i]->pname << "is " << BMI << "therefore they are at risk for cardiovascular disease" <<endl;
+    if(bmindex <= 27){
+                 cout << "The BMI" << "is " << bmindex << "therefore they are at risk for cardiovascular disease" << endl;
              }
-         }
-
+         
 };
-*/
-/*
+
 void genderRatio(struct person *CountyRes1){
     
     person* tmp[20];
@@ -398,21 +401,21 @@ void genderRatio(struct person *CountyRes1){
     
     for(int i = 0; i < pcount; i++)
     {
-        if (gender == f)
+        if (CountyRes1->gender == 'F')
         {
             fcount++;
         }
-        if else (gender == m)
+        else if (CountyRes1->gender == 'M')
         {
             mcount++;
         }
     }
     
-    cout << "There are " << (fcount/mcount)*1000 << " women per 1000 men." << end;
+    int perThou = (fcount%mcount)*1000;
     
+    cout << perThou << "women per 1000 men" << endl;
     
 };
-   */
 
 void findParents(struct person *CountyRes1){
     person* tmp[20];
@@ -712,11 +715,11 @@ int main()
          flag++;
     }
     else if(choice == 7){
-         //atRisk(CountyRes1);
+         atRisk(CountyRes1);
          flag++;
     }
     else if(choice == 8){
-         //genderRatio(CountyRes1);
+         genderRatio(CountyRes1);
          flag++;
     }
     else if(choice == 9){
