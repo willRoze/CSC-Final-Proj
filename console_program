@@ -671,7 +671,7 @@ int main()
     while(flag == 0){
     cout << "Welcome to the Person Console, which of the following would you like to do?" << endl;
     cout<< "1. Display Persons " << endl << "2. Delete a Person " << endl 
-    << "3. Add a person, then display all persons " << endl << "4. Add people to array in bulk by reading file.txt " << endl 
+    << "3. Add a person " << endl << "4. Add people to array in bulk by reading file.txt " << endl 
     << "5. Edit a Person " << endl << "6. Check if Eligible for Social Security " << endl 
     << "7. Display all persons at high risk of cardiovascular disease " << endl << "8. Male to female ratio " << endl 
     << "9. Find Parents of a Person " << endl << "10. Find the all Children of a Person " << endl 
