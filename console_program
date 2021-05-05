@@ -713,11 +713,11 @@ int main()
          flag++;
     }
     else if(choice == 7){
-         atRisk(CountyRes1);
+         //atRisk(CountyRes1);
          flag++;
     }
     else if(choice == 8){
-         genderRatio(CountyRes1);
+         //genderRatio(CountyRes1);
          flag++;
     }
     else if(choice == 9){
@@ -729,11 +729,11 @@ int main()
          flag++;
     }
     else if(choice == 11){
-         findSiblings(CountyRes1);
+         //findSiblings(CountyRes1);
          flag++;
     }
     else if(choice == 12){
-         findFamily(CountyRes1);
+         //findFamily(CountyRes1);
          flag++;
     }
     else {
