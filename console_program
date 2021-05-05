@@ -665,6 +665,28 @@ void findSibling(struct person *CountyRes1){
 };
 
 /*void func12(){
+
+person* tmp[20];
+    int pcount = 0;
+     for (int i = 0; i < 20; i++){
+        tmp[i] = CountyRes1;
+        CountyRes1++;
+        pcount++;
+    }
+    
+        person* swapper;
+        
+        
+     for(int i = 0; i < pcount; i++){
+        for(int j = 1; j < pcount; j++){
+            if(tmp[j]->SSN < tmp[j - 1]->SSN){
+                swapper = tmp[j];
+                tmp[j] = tmp[j - 1];
+                tmp[j - 1] = swapper;
+            }
+        }
+    }
+    long choice;
    
 };
 */
