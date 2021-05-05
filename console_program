@@ -664,9 +664,10 @@ void findSibling(struct person *CountyRes1){
    
 };
 
-void func12(){
+/*void func12(){
    
 };
+*/
 
 
 
