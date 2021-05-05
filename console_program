@@ -564,7 +564,103 @@ void findChildren(struct person *CountyRes1){
     */
 };
 
-void func11(){
+void findSibling(struct person *CountyRes1){
+    person* tmp[20];
+    int pcount = 0;
+     for (int i = 0; i < 20; i++){
+        tmp[i] = CountyRes1;
+        CountyRes1++;
+        pcount++;
+    }
+    
+        person* swapper;
+        
+        
+     for(int i = 0; i < pcount; i++){
+        for(int j = 1; j < pcount; j++){
+            if(tmp[j]->SSN < tmp[j - 1]->SSN){
+                swapper = tmp[j];
+                tmp[j] = tmp[j - 1];
+                tmp[j - 1] = swapper;
+            }
+        }
+    }
+    long choice;
+     cout << "Input the SSN of the person you would like to find the siblings of: " << endl;
+    for(int i = 0; i < 20; i++){
+        cout<< tmp[i]->pname << ": " << tmp[i]->SSN << endl;
+       // tmp[i]++;
+    }
+    cin >> choice;
+    long motherFinder = 0, fatherFinder = 0;
+    int t = 0;
+    for(int i = 0; i < pcount; i++){
+        if(choice == tmp[i]->SSN){
+            motherFinder = tmp[i]->mSSN;
+            fatherFinder = tmp[i]->fSSN;
+            t = 1;
+        }
+        else{
+            continue;
+        }
+        
+    }
+    if(t == 0){
+        cout<<"Selection not found";
+    }
+    for(int i = 0; i < pcount; i++){
+        if(motherFinder == tmp[i]->SSN){
+            cout<<"Mother found: " << tmp[i]->pname << " | " << tmp[i]->SSN;
+        }
+        else if(fatherFinder == tmp[i]->SSN){
+            cout<<"Father found: " << tmp[i]->pname << " | " << tmp[i]->SSN;
+        }
+    }
+ 
+     for(int i = 0; i < pcount; i++){
+        for(int j = 1; j < pcount; j++){
+            if(get_age(tmp[j]->DOB) > get_age(tmp[j - 1]->DOB)){
+                swapper = tmp[j];
+                tmp[j] = tmp[j - 1];
+                tmp[j - 1] = swapper;
+            }
+        }
+    }
+  
+    for(int i = 0; i < 20; i++){
+        cout<< tmp[i]->pname << ": " << tmp[i]->SSN << endl;
+       // tmp[i]++;
+    }
+    cin >> choice;
+    long childFinder = 0;
+    for(int i = 0; i < pcount; i++){
+        if(choice == tmp[i]->SSN){
+            childFinder = tmp[i]->SSN;
+            
+            t = 1;
+        }
+        else{
+            continue;
+        }
+        
+    }
+    if(t == 0){
+        cout<<"Selection not found";
+    }
+    int childCount = 0;
+    for(int i = 0; i < pcount; i++){
+        if(childFinder == tmp[i]->mSSN){
+            cout<<"Sibling Found: " << tmp[i]->pname << " | " << get_age(tmp[i]->DOB + " 00:00:00") << endl;
+            childCount++;
+        }
+        else if(childFinder == tmp[i]->fSSN){
+            cout<<"Sibling found: " << tmp[i]->pname << " | " << get_age(tmp[i]->DOB + " 00:00:00")<< endl;
+            childCount++;
+        }
+        else{
+            continue;
+        }
+    
    
 };
 
@@ -731,7 +827,7 @@ int main()
          flag++;
     }
     else if(choice == 11){
-         //findSiblings(CountyRes1);
+         findSibling(CountyRes1);
          flag++;
     }
     else if(choice == 12){
