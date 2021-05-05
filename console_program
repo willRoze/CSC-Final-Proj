@@ -693,8 +693,6 @@ int main()
     }
     else if(choice == 2){
          deletePerson(CountyRes1);
-
-
          flag++;
          
     }
@@ -715,11 +713,11 @@ int main()
          flag++;
     }
     else if(choice == 7){
-        // atRisk(CountyRes1);
+         atRisk(CountyRes1);
          flag++;
     }
     else if(choice == 8){
-        // genderRatio(CountyRes1);
+         genderRatio(CountyRes1);
          flag++;
     }
     else if(choice == 9){
@@ -731,12 +729,11 @@ int main()
          flag++;
     }
     else if(choice == 11){
-        // findSiblings(CountyRes1)
+         findSiblings(CountyRes1);
          flag++;
     }
     else if(choice == 12){
-        // findFamily(CountyRes1)
-         cout<< "asegasg";
+         findFamily(CountyRes1);
          flag++;
     }
     else {
