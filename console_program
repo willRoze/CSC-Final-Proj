@@ -149,7 +149,6 @@ void deletePerson(struct person *CountyRes1){
 };
 
 void addPerson(struct person *CountyRes1){
-    char response;
     person newPerson;
     string strInp;
             
