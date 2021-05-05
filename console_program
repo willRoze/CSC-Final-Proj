@@ -369,7 +369,7 @@ void socialCheck(struct person *CountyRes1){
      }
     
 };
-
+/*
 void atRisk(struct person *CountyRes1){
     
     person* tmp[20];
@@ -390,7 +390,8 @@ void atRisk(struct person *CountyRes1){
          }
 
 };
-
+*/
+/*
 void genderRatio(struct person *CountyRes1){
     
     person* tmp[20];
@@ -420,7 +421,7 @@ void genderRatio(struct person *CountyRes1){
     
     
 };
-   
+   */
 
 void findParents(struct person *CountyRes1){
     person* tmp[20];
@@ -491,7 +492,7 @@ void findChildren(struct person *CountyRes1){
         
      for(int i = 0; i < pcount; i++){
         for(int j = 1; j < pcount; j++){
-            if(tmp[j]->SSN < tmp[j - 1]->SSN){
+            if(get_age(tmp[j]->DOB) > get_age(tmp[j - 1]->DOB)){
                 swapper = tmp[j];
                 tmp[j] = tmp[j - 1];
                 tmp[j - 1] = swapper;
@@ -524,11 +525,11 @@ void findChildren(struct person *CountyRes1){
     int childCount;
     for(int i = 0; i < pcount; i++){
         if(childFinder == tmp[i]->mSSN){
-            cout<<"Child Found: " << tmp[i]->pname << " | " << tmp[i]->SSN << endl;
+            cout<<"Child Found: " << tmp[i]->pname << " | " << get_age(tmp[i]->DOB + " 00:00:00") << endl;
             childCount++;
         }
         else if(childFinder == tmp[i]->fSSN){
-            cout<<"Child found: " << tmp[i]->pname << " | " << tmp[i]->SSN<< endl;
+            cout<<"Child found: " << tmp[i]->pname << " | " << get_age(tmp[i]->DOB + " 00:00:00")<< endl;
             childCount++;
         }
         else{
@@ -703,11 +704,11 @@ int main()
          
     }
     else if(choice == 3){
-         addPerson(CountyRes1)
+         addPerson(CountyRes1);
          flag++;
     }
     else if(choice == 4){
-         addArray(CountyRes1)
+         addArray(CountyRes1);
          flag++;
     }
     else if(choice == 5){
@@ -719,11 +720,11 @@ int main()
          flag++;
     }
     else if(choice == 7){
-         atRisk(CountyRes1)
+        // atRisk(CountyRes1);
          flag++;
     }
     else if(choice == 8){
-         genderRatio(CountyRes1)
+        // genderRatio(CountyRes1);
          flag++;
     }
     else if(choice == 9){
@@ -735,11 +736,11 @@ int main()
          flag++;
     }
     else if(choice == 11){
-         findSiblings(CountyRes1)
+        // findSiblings(CountyRes1)
          flag++;
     }
     else if(choice == 12){
-         findFamily(CountyRes1)
+        // findFamily(CountyRes1)
          cout<< "asegasg";
          flag++;
     }
